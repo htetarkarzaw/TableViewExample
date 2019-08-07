@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assgiment_2_TableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UOw-Nm-cJ7">
+                                <rect key="frame" x="0.0" y="117" width="414" height="745"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k5d-yM-En1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="73"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBack" translatesAutoresizingMaskIntoConstraints="NO" id="ftB-zG-rgS">
+                                        <rect key="frame" x="24" y="24" width="50" height="25"/>
+                                        <color key="tintColor" name="Yellow"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="2tU-oN-nyN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDJ-Tw-AHW">
+                                        <rect key="frame" x="166" y="20" width="82" height="33"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ftB-zG-rgS" firstAttribute="leading" secondItem="k5d-yM-En1" secondAttribute="leading" constant="24" id="9Ou-Kr-boJ"/>
+                                    <constraint firstItem="FDJ-Tw-AHW" firstAttribute="centerY" secondItem="k5d-yM-En1" secondAttribute="centerY" id="LGd-bq-MNa"/>
+                                    <constraint firstAttribute="bottom" secondItem="ftB-zG-rgS" secondAttribute="bottom" constant="24" id="Ot6-0h-fXS"/>
+                                    <constraint firstItem="FDJ-Tw-AHW" firstAttribute="centerX" secondItem="k5d-yM-En1" secondAttribute="centerX" id="onP-0O-gqU"/>
+                                    <constraint firstItem="ftB-zG-rgS" firstAttribute="top" secondItem="k5d-yM-En1" secondAttribute="top" constant="24" id="xjj-pV-EJ3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k5d-yM-En1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Ib-HK-Yqz"/>
+                            <constraint firstItem="UOw-Nm-cJ7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8j8-S5-U2B"/>
+                            <constraint firstItem="UOw-Nm-cJ7" firstAttribute="top" secondItem="k5d-yM-En1" secondAttribute="bottom" id="Jf5-hi-o9w"/>
+                            <constraint firstItem="k5d-yM-En1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RH5-ZZ-1Jy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UOw-Nm-cJ7" secondAttribute="trailing" id="kob-bb-ihR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k5d-yM-En1" secondAttribute="trailing" id="mlj-7T-VAY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UOw-Nm-cJ7" secondAttribute="bottom" id="u6z-B1-elF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tvFriendLIst" destination="UOw-Nm-cJ7" id="RYI-fz-Qvs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="imgBack" width="25" height="25"/>
+        <namedColor name="Yellow">
+            <color red="0.86799997091293335" green="0.85500001907348633" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
