@@ -16,12 +16,16 @@ class FriendTableViewCell: UITableViewCell {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblType: UILabel!
     @IBOutlet weak var lblScare: UILabel!
+    var isFollow = false
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         self.selectionStyle = .none
-        ivProfile.layer.cornerRadius = 60
+        ivProfile.layer.cornerRadius = ivProfile.frame.height/2
         viewFollow.layer.cornerRadius = 10
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onClickFollow))
+        viewFollow.addGestureRecognizer(tapGestureRecognizer)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,5 +33,16 @@ class FriendTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @objc func onClickFollow(){
+        if(isFollow){
+            viewFollow.layer.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            isFollow = false
+        }else{
+            viewFollow.layer.backgroundColor = #colorLiteral(red: 0.1843137255, green: 0.7450980392, blue: 0.5725490196, alpha: 1)
+            isFollow = true
+        }
+    }
+    
     
 }
